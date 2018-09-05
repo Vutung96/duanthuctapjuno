@@ -1,0 +1,1 @@
+<option value={{ $cate_id }} @if($selected && $cate_id === $selected) selected  @endif >{{ $str.$cate_name }}</option>

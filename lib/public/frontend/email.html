@@ -1,0 +1,89 @@
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="shortcut icon" type="image/png" href="access/image/junoicon.png" />
+	<link rel="stylesheet" href="css/bs.css">
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/default.css">
+	<script src="js/jquery-3.3.1.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/lightslider.js"></script>
+	<script src="js/myscript.js"></script>
+</head>
+<body>
+	<div id="cart">
+		<div class="container">
+				<h3 style="color: #E32124;">Thông tin khách hàng</h3>
+				<p>
+					<span class="info">Khách hàng: </span>
+					{{$info['name']}}
+				</p>
+				<p>
+					<span class="info">Email: </span>
+					vietpro@gmail.com
+				</p>
+				<p>
+					<span class="info">Điện thoại: </span>
+					01234567988
+				</p>
+				<p>
+					<span class="info">Địa chỉ: </span>
+					Hà Nội
+				</p>
+		</div>
+	</div>						
+	<div id="cart">
+		<div class="container">
+				<h3 style="color: #E32124;">Hóa đơn mua hàng</h3>							
+				<table class="table">
+					<thead class="thead-inverse">
+						    <tr>
+						      <th></th>
+						      <th>Thông tin</th>
+						      <th>Số lượng</th>
+						      <th>Giá</th>
+						      <th>Thành tiền</th>
+						    </tr>
+					</thead>
+					 	<tbody>
+						    <tr>
+						      	<td><img width="80" src="" alt=""></td>
+						      	<td>
+							      	<p class="name"></p>
+							      	<p>Màu: Hồng</p>
+							      	<p>Size: 43</p>
+						      	</td>
+						      	<td><span class="amount">2</span></td>
+						      	<td>
+						      		<p class="price">143000<sup>đ</sup></p>
+						      	</td>
+						      	<td>
+						 			<p class="price">143000<sup>đ</sup></p>
+						      	</td>
+						    </tr>
+						    
+						</tbody>
+						<tfoot>
+					  		<tr>
+								<td colspan="4">Tổng tiền:</td>
+								<td style="color: #E32124;" class="total-price">21.000.000VNĐ</td>
+							</tr>	
+						</tfoot>
+					
+				</table>
+		</div>
+	</div>
+	<div id="cart">
+		<div class="container">
+			<br>
+			<p align="justify">
+				<b style="color: #E32124;">Quý khách đã đặt hàng thành công!</b><br />
+				• Sản phẩm của Quý khách sẽ được chuyển đến Địa chỉ có trong phần Thông tin Khách hàng của chúng Tôi sau thời gian 2 đến 3 ngày, tính từ thời điểm này.<br />
+				• Nhân viên giao hàng sẽ liên hệ với Quý khách qua Số Điện thoại trước khi giao hàng 24 tiếng.<br />
+				<b style="color: #E32124;"><br/>Cám ơn Quý khách đã sử dụng Sản phẩm của Công ty chúng Tôi!</b>
+			</p>
+		</div>
+	</div>					
+<!-- end main -->
+</body>
+</html>
