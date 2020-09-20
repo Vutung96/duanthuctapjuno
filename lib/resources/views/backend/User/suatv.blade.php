@@ -23,7 +23,7 @@
                 <div class="panel-body">
                     <div class="col-md-12">
                         @include('error.note')
-                        <form enctype="multipart/form-data" role="form" method="post">
+                        <form enctype="multipart/form-data" role="form" method="post" class="form_account">
                             
                             <div class="form-group">
                                 <label>Tên thành viên</label>
@@ -35,12 +35,13 @@
                             </div>
                             <div class="form-group" >
                                         <label>Ảnh thành viên</label>
-                                        <input  id="img" type="file" name="img" class="form-control hidden" onchange="changeImg(this)">
+                                        <input  id="img" type="file" name="img" class="form-control hidden">
                                         @if($account->user_avatar!=null)
                                         <img id="avatar" class="thumbnail" width="100px" src="{{ asset('/storage/avatar/'.$account->user_avatar) }}">
                                         @else
                                         <img id="avatar" class="thumbnail" width="100px" src="anh/no.png">
                                         @endif
+                                        <input type="hidden" name="user_avatar" value="{{ $account->user_avatar }}">
                             </div>
                             <div class="form-group" >
                                 <label>Điện thoại</label>

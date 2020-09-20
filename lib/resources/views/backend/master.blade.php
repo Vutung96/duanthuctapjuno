@@ -22,12 +22,7 @@
 <script src="js/html5shiv.js"></script>
 <script src="js/respond.min.js"></script>
 <![endif]-->
-<script>
-    $.ajaxSetup({
-  headers: {
-    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-  }
-});
+
 </script>
 </head>
 
@@ -142,6 +137,35 @@
         <script src="js/dropzone.js" type="text/javascript"></script>
         <script src="js/myscript.js" type="text/javascript"></script>
         <script src="{{ asset('ckeditor/ckeditor.js') }}"></script>
+        <script>
+            $.ajaxSetup({
+          headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+          }
+        });
+        </script>
+        <script>
+            $(document).ready(function () {
+                $('#avatar').on('click',function(){
+                    $('#img').click();
+                });
+
+                $('#img').on('change',function(){
+                    var arr = new FormData($('.form_account')['0']);
+                    $.ajax({
+                        url: '{{ route( 'uploadImage' ) }}',
+                        type: 'post',
+                        data: arr,
+                        contentType: false,
+                        processData: false,
+                        success: function (dt) {
+                            $('#avatar').attr('src',dt.path);
+                            $('input[name="user_avatar"]').val(dt.filename);
+                        }
+                    });
+                });
+            });
+        </script> 
         <script>
             $('#calendar').datepicker({
             });

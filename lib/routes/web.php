@@ -34,6 +34,8 @@ Route::group(['namespace'=>'Admin'],function(){
 			Route::post('edit/{id}','AccountController@postEditAccount');
 
 			Route::get('delete/{id}','AccountController@getDeleteAccount');
+
+			Route::post('/uploadImage','AccountController@uploadImage')->name('uploadImage');
 		});
 		//Comment
 		Route::group(['prefix'=>'comment'],function(){

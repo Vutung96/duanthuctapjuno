@@ -23,7 +23,7 @@
                 <div class="panel-body">
                     <div class="col-md-12">
                         @include('error.note')
-                        <form enctype="multipart/form-data" role="form" method="post">
+                        <form enctype="multipart/form-data" role="form" method="post" class="form_account">
                             
                             <div class="form-group">
                                 <label>Tên thành viên</label>
@@ -39,8 +39,9 @@
                             </div> 
                             <div class="form-group" >
                                         <label>Ảnh thành viên</label>
-                                        <input  id="img" type="file" name="img" class="form-control hidden" onchange="changeImg(this)">
+                                        <input  id="img" type="file" name="img" class="form-control hidden">
                                         <img id="avatar" class="thumbnail" width="100px" src="anh/new_seo-10-512.png">
+                                        <input type="hidden" name="user_avatar" value="">
                             </div>
                             <div class="form-group" >
                                 <label>Điện thoại</label>
