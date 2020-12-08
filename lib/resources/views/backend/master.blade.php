@@ -68,7 +68,7 @@
         </li>
         <li class="@if(Request::is('admin/product') || Request::is('admin/attribute') || Request::is('admin/category') || Request::is('admin/product/add') || Request::is('admin/attribute/add') || Request::is('admin/category/add')) active @endif parent">
             <a href="{{ asset('admin/product') }}">
-                <span data-toggle="collapse" href="#sub-item-2"><svg class="glyph stroked chevron-down"><use xlink:href="#stroked-chevron-down"></use></svg></span> Quản lý sản phẩm
+                <span data-toggle="collapse in" href="#sub-item-2"><svg class="glyph stroked chevron-down"><use xlink:href="#stroked-chevron-down"></use></svg></span> Quản lý sản phẩm
             </a>
             <ul class="children collapse" id="sub-item-2">
                 <li>
